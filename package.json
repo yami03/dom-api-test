@@ -4,7 +4,7 @@
     "app:build": "zeroconfig-webapp-scripts build app",
     "app:start": "zeroconfig-webapp-scripts start app",
     "app-plain-dom:build": "zeroconfig-webapp-scripts build app-plain-dom",
-    "app-plain-dom:start": "zeroconfig-webapp-scripts start app-plain-dom",
+    "app-plain-dom:start": "zeroconfig-webapp-scripts start app-plain-dom --port 3103",
     "storybook:start": "start-storybook",
     "storybook:build": "build-storybook",
     "build": "npm run app:build",
