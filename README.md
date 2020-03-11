@@ -29,7 +29,7 @@ describe('E2E Sample', () => {
     await page.goto('http://localhost:3100');
     await page.waitForSelector('#app > h1');
 
-    await expect(page.$eval('#app > h1', e => e.innerHTML)).resolves.toEqual('Hello World!');
+    await expect(page.$eval('#app > h1', (e: Element) => e.innerHTML)).resolves.toEqual('Hello World!');
 
     await browser.close();
   });
@@ -57,19 +57,4 @@ describe('Sample', () => {
 
 ## Storybook
 <!-- import src/**/*.stories.{js,jsx,ts,tsx} --title-tag h3 -->
-
-### src/app/components/Title.stories.tsx
-
-
-```tsx
-import { storiesOf } from '@storybook/react';
-import React from 'react';
-import { Title } from './Title';
-
-storiesOf('Title', module)
-  .add('text=Hello?', () => <Title text="Hello?" />)
-  .add('text=World?', () => <Title text="World?" />);
-
-```
-
 <!-- importend -->
