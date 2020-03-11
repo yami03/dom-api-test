@@ -5,6 +5,7 @@
     "app:start": "zeroconfig-webapp-scripts start app",
     "app-plain-dom:build": "zeroconfig-webapp-scripts build app-plain-dom",
     "app-plain-dom:start": "zeroconfig-webapp-scripts start app-plain-dom --port 3103",
+    "app-without-jsx:start": "zeroconfig-webapp-scripts start app-without-jsx --port 3106",
     "storybook:start": "start-storybook",
     "storybook:build": "build-storybook",
     "build": "npm run app:build",
@@ -32,6 +33,14 @@
     ]
   },
   "prettier": "@lunit/prettier-config",
+  "eslintConfig": {
+    "extends": [
+      "@lunit",
+      "prettier",
+      "prettier/react",
+      "prettier/@typescript-eslint"
+    ]
+  },
   "dependencies": {
     "react": "^16.13.0",
     "react-dom": "^16.13.0"
